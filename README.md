@@ -125,12 +125,3 @@ To kickstart your journey with the MovieAPI project, follow these simple steps:
 6. **Access the API Endpoints:**
    - Once the application is running, explore the MovieAPI by accessing the defined endpoints.
 
-Now you're all set! Dive into the MovieAPI project, manage movie-related data effortlessly, and feel free to contribute or report issues. Happy coding! 🎬🍿
-
-# 🌟 **Project Author**
-
-## **<span style="color:red;">Vikash Katiyar</span>**
-
-📧 **Email:** vikashktr018@gmail.com
-
-Feel free to reach out to the author for any inquiries, feedback, or collaboration opportunities related to the MovieAPI project. Your input is valuable! 🚀
