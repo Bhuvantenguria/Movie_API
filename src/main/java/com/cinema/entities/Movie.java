@@ -46,7 +46,6 @@ public class Movie {
 	private Integer releaseYear;
 
 	@Column(nullable = false)
-	@NotBlank(message = "Please provide movie's poster!")
-	private String poster;
-
+	@NotBlank(message = "Please provide movie's genre!")
+	private String genre; 
 }

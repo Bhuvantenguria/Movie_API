@@ -12,9 +12,11 @@ C:\Users\bhuva\Desktop\tip\Movie_API\src\main\java\com\cinema\auth\utils\AuthRes
 C:\Users\bhuva\Desktop\tip\Movie_API\src\main\java\com\cinema\controllers\AuthController.java
 C:\Users\bhuva\Desktop\tip\Movie_API\src\main\java\com\cinema\auth\service\AuthService.java
 C:\Users\bhuva\Desktop\tip\Movie_API\src\main\java\com\cinema\service\FileService.java
+C:\Users\bhuva\Desktop\tip\Movie_API\src\main\java\com\cinema\auth\config\CorsConfiguration.java
 C:\Users\bhuva\Desktop\tip\Movie_API\src\main\java\com\cinema\auth\utils\RegisterRequest.java
 C:\Users\bhuva\Desktop\tip\Movie_API\src\main\java\com\cinema\exception\EmptyFileException.java
 C:\Users\bhuva\Desktop\tip\Movie_API\src\main\java\com\cinema\service\FileServiceImpl.java
+C:\Users\bhuva\Desktop\tip\Movie_API\src\main\java\com\cinema\auth\exception\UserAlreadyExistsException.java
 C:\Users\bhuva\Desktop\tip\Movie_API\src\main\java\com\cinema\auth\service\RefreshTokenService.java
 C:\Users\bhuva\Desktop\tip\Movie_API\src\main\java\com\cinema\auth\config\ApplicationConfig.java
 C:\Users\bhuva\Desktop\tip\Movie_API\src\main\java\com\cinema\auth\config\SecurityConfiguration.java

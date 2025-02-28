@@ -13,6 +13,8 @@ import com.cinema.auth.entities.User;
 import com.cinema.auth.entities.UserRole;
 import com.cinema.auth.repositories.UserRepository;
 import com.cinema.auth.utils.AuthResponse;
+import com.cinema.auth.exception.UserAlreadyExistsException;
+
 import com.cinema.auth.utils.LoginRequest;
 import com.cinema.auth.utils.RegisterRequest;
 
@@ -33,6 +35,10 @@ public class AuthService {
 	
     
 	public AuthResponse register(RegisterRequest registerRequest) {
+		if (userRepository.findByEmail(registerRequest.getEmail()).isPresent()) {
+            throw new UserAlreadyExistsException("User with this email already exists.");
+        }
+
 		var user = User.builder()
 				.name(registerRequest.getName())
                 .email(registerRequest.getEmail())

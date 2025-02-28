@@ -3,10 +3,6 @@
  */
 package com.cinema.utils;
 
-/**
- * @author vikash katiyar
- *
- */
 public class AppConstants {
 	
 	// Default page number

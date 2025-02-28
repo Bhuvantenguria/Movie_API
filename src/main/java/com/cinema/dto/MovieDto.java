@@ -27,9 +27,6 @@ public class MovieDto {
 
 	private Integer releaseYear;
 
-	@NotBlank(message = "Please provide movie's poster!")
-	private String poster;
-
-	@NotBlank(message = "Please provide poster's url!")
-	private String posterUrl;
+	@NotBlank(message = "Please provide movie's genre!")
+	private String genre; 
 }

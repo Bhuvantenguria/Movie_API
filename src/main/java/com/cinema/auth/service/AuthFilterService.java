@@ -14,6 +14,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import jakarta.servlet.FilterChain;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -30,13 +33,17 @@ public class AuthFilterService extends OncePerRequestFilter {
 	private final JwtService jwtService;
 	private final UserDetailsService userDetailsService;
 
-	public AuthFilterService(JwtService jwtService, UserDetailsService userDetailsService) {
+    private static final Logger logger = LoggerFactory.getLogger(AuthFilterService.class);
+
+    public AuthFilterService(JwtService jwtService, UserDetailsService userDetailsService) {
+
 		this.jwtService = jwtService;
 		this.userDetailsService = userDetailsService;
 	}
 
-	@Override
-	protected void doFilterInternal(@NotNull HttpServletRequest request, 
+    @Override
+    protected void doFilterInternal(@NotNull HttpServletRequest request, 
+
 									@NotNull HttpServletResponse response, 
 									@NotNull FilterChain filterChain)
 			throws ServletException, IOException {
@@ -45,18 +52,24 @@ public class AuthFilterService extends OncePerRequestFilter {
 		String jwt;
 		String username;
 
-		if (authHeader == null || !authHeader.startsWith("Bearer ")) {
+        if (authHeader == null || !authHeader.startsWith("Bearer ")) {
+            logger.warn("Authorization header is missing or does not start with Bearer.");
+
 			filterChain.doFilter(request, response);
 			return;
 		}
 
-		// Extract JWT
+            // Extract JWT
+            logger.info("Extracting JWT from Authorization header.");
+
 		jwt = authHeader.substring(7);
 
 		// extract username
 		username = jwtService.extractUsername(jwt);
 
-		if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
+        if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
+            logger.info("Validating token for user: {}", username);
+
 			UserDetails userDetails = userDetailsService.loadUserByUsername(username);
 			if (jwtService.isTokenValid(jwt, userDetails)) {
 				UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(
@@ -67,7 +80,9 @@ public class AuthFilterService extends OncePerRequestFilter {
 			}
 		}
 
-		filterChain.doFilter(request, response);
+        filterChain.doFilter(request, response);
+        logger.info("Filter chain processed successfully.");
+
 	}
 
 }
