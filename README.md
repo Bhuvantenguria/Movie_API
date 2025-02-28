@@ -93,7 +93,7 @@ To kickstart your journey with the MovieAPI project, follow these simple steps:
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/Vikashkatiyar/Movie_Api_Backend.git
+   git clone https://github.com/Bhuvantenguria/Movie_Api_Backend.git
    ```
 
 2. **Navigate to the Project Directory:**
