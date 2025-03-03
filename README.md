@@ -68,8 +68,8 @@ The Spring Boot MovieAPI Backend is a robust Java 17 application designed to man
   - `GET http://localhost:8080/api/v1/movie/search?genre={genre}`
 
 - 📊 **Sort by Release Date or Name:**
-  - `GET http://localhost:8080/api/v1/movie/sort?sortBy=releaseDate`
-  - `GET http://localhost:8080/api/v1/movie/sort?sortBy=name`
+  - `GET http://localhost:8080/api/v1/movie/allMoviesPageSort?sortBy=releaseDate`
+  - `GET http://localhost:8080/api/v1/movie/allMoviesPageSort?sortBy=name`
 
 - 📑 **Get Movies with Pagination:**
   - `GET http://localhost:8080/api/v1/movie/allMoviesPage?pageNumber=0&pageSize=2`
