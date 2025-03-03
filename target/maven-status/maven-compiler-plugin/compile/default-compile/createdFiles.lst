@@ -1,10 +1,7 @@
 com\cinema\auth\repositories\UserRepository.class
 com\cinema\auth\utils\LoginRequest$LoginRequestBuilder.class
-com\cinema\exception\EmptyFileException.class
 com\cinema\auth\repositories\RefreshTokenRepository.class
 com\cinema\service\MovieServiceImpl.class
-com\cinema\auth\config\SecurityConfiguration.class
-com\cinema\exception\FileExistsException.class
 com\cinema\auth\service\AuthService.class
 com\cinema\auth\entities\User$UserBuilder.class
 com\cinema\auth\service\AuthFilterService.class

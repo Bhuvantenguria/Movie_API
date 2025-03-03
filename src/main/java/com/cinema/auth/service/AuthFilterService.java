@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.cinema.auth.service;
 
 import java.io.IOException;
@@ -23,10 +20,6 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.constraints.NotNull;
 
 
-/**
- * 
- *
- */
 @Service
 public class AuthFilterService extends OncePerRequestFilter {
 

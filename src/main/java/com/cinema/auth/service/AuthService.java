@@ -1,6 +1,4 @@
-/**
- * 
- */
+
 package com.cinema.auth.service;
 
 import org.springframework.security.authentication.AuthenticationManager;
@@ -20,9 +18,6 @@ import com.cinema.auth.utils.RegisterRequest;
 
 import lombok.RequiredArgsConstructor;
 
-/**
- *
- */
 @Service
 @RequiredArgsConstructor
 public class AuthService {

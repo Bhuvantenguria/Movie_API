@@ -16,9 +16,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 import com.cinema.auth.repositories.UserRepository;
 
-/**
- *
- */
 @Configuration
 public class ApplicationConfig {
 

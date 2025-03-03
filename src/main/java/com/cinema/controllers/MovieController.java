@@ -82,7 +82,7 @@ public class MovieController {
         return ResponseEntity.ok(movieService.getAllMoviesWithPaginationAndSorting(pageNumber, pageSize, sortBy, dir));
     }
     
-    // New search endpoint
+    // search endpoint
     @GetMapping("/search")
     public ResponseEntity<MoviePageResponse> searchMovies(
             @RequestParam(required = false) String name,
@@ -100,7 +100,7 @@ public class MovieController {
         return ResponseEntity.ok(response);
     }
     
-    // Utility method to convert JSON string to MovieDto
+    // convert JSON string to MovieDto
     private MovieDto convertToMovieDto(String movieDtoObj) throws JsonMappingException, JsonProcessingException {
         ObjectMapper objectMapper = new ObjectMapper();
         return objectMapper.readValue(movieDtoObj, MovieDto.class);

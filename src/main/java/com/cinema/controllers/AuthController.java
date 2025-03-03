@@ -1,6 +1,4 @@
-/**
- * 
- */
+
 package com.cinema.controllers;
 
 import org.springframework.http.ResponseEntity;

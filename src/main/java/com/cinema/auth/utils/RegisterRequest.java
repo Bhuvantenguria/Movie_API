@@ -1,6 +1,4 @@
-/**
- * 
- */
+
 package com.cinema.auth.utils;
 
 import jakarta.validation.constraints.NotNull;
@@ -9,10 +7,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-/**
- * @author vikash katiyar
- *
- */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
